@@ -1,0 +1,221 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group {
+  background-color: var(--ig-surface-500);
+  border-color: var(--ig-gray-500);
+  border-width: 0px 1px 0px 0px;
+  border-style: solid;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  overflow: auto;
+  padding: 32px;
+  width: 450px;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 450px;
+  flex-shrink: 0;
+}
+.card {
+  --header-text-color: var(--ig-card-header-text-color, hsla(from color(from var(--background) var(--y-contrast)) h 0 l/1));
+  --subtitle-text-color: var(--ig-card-subtitle-text-color, lch(from hsla(from color(from var(--background) var(--y-contrast)) h 0 l/1) calc(l + (50 - l) * 0.1 + sign(50 - l) * 7) c h));
+  --content-text-color: var(--ig-card-content-text-color, lch(from hsla(from color(from var(--background) var(--y-contrast)) h 0 l/1) calc(l + (50 - l) * 0.1 + sign(50 - l) * 7) c h));
+  --actions-text-color: var(--ig-card-actions-text-color, hsla(from color(from var(--background) var(--y-contrast)) h 0 l/1));
+  --background: var(--ig-card-background, var(--surface-500));
+  overflow: unset;
+  margin: 0 0 8px;
+  height: max-content;
+}
+.accordion {
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+.row-layout {
+  display: flex;
+}
+.row-layout-1 {
+  background-color: var(--ig-gray-100);
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  overflow: auto;
+  margin: 0.0px;
+  padding: 0.0px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.column-layout-1 {
+  background-color: var(--ig-surface-500);
+  border-color: var(--ig-gray-400);
+  border-width: 2px;
+  border-style: solid;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  margin: 0.0px;
+  padding: 36.0px;
+  width: 500.0px;
+  height: max-content;
+  min-width: 500.0px;
+  max-width: 500.0px;
+  flex-shrink: 0;
+}
+.row-layout-2 {
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  margin: 0.0px 0.0px 32.0px;
+  padding: 0.0px;
+  height: max-content;
+  flex-shrink: 0;
+}
+.group_1 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 32px;
+  position: relative;
+  width: 350px;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 350px;
+  flex-shrink: 0;
+}
+.group_2 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  overflow: auto;
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_3 {
+  background-color: var(--ig-gray-300);
+  z-index: 1;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  top: 0;
+  position: sticky;
+  padding: 16px;
+}
+.group_4 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_5 {
+  background-color: var(--ig-gray-50);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  top: 0;
+  position: relative;
+  padding: 16px;
+}
+.actions-content {
+  min-width: 50px;
+  min-height: 40px;
+}
+.avatar {
+  --ig-size: var(--ig-size-medium);
+  --igx-avatar-background: transparent;
+}
+.avatar_1 {
+  --ig-size: var(--ig-size-small);
+  --igx-avatar-background: transparent;
+}
+.image {
+  object-fit: cover;
+  min-width: 0;
+  min-height: 0;
+}
+.text {
+  height: max-content;
+  min-width: min-content;
+}
+.title-1 {
+  text-align: center;
+  margin: 0.0px 0.0px 32.0px;
+  padding: 0.0px;
+  height: max-content;
+}
+.hyperlink {
+  color: var(--ig-info-500);
+  height: max-content;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+.text-2 {
+  text-align: center;
+  margin: 0.0px 0.0px 16.0px;
+  padding: 0.0px;
+  height: max-content;
+}
+.text_1 {
+  position: relative;
+  height: max-content;
+  min-width: min-content;
+}
+.button {
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+}
+.input-group-1 {
+  margin: 0.0px 0.0px 16.0px;
+  padding: 0.0px;
+  height: max-content;
+}
+.input-group-1_1 {
+  margin: 0.0px 0.0px 16px;
+  padding: 0.0px;
+  height: max-content;
+}
+.checkbox-1 {
+  margin: 0.0px;
+  padding: 0.0px;
+  width: max-content;
+  height: max-content;
+}
+.button-1 {
+  --ig-size: var(--ig-size-medium);
+  margin: 0.0px 0.0px 16.0px;
+  padding: 0.0px;
+  height: max-content;
+}
+.button-1_1 {
+  --ig-size: var(--ig-size-medium);
+  margin: 0.0px 0.0px 16px;
+  padding: 0.0px;
+  height: max-content;
+}
+.list {
+  height: max-content;
+}
+.tree {
+  min-width: max-content;
+  min-height: max-content;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.tree_1 {
+  min-width: max-content;
+  min-height: max-content;
+  flex-shrink: 0;
+}

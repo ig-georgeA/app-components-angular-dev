@@ -1,0 +1,73 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.grid {
+  --ig-size: var(--ig-size-medium);
+  min-width: 600px;
+  min-height: 300px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.row-layout {
+  display: flex;
+}
+.group {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group_1 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 0;
+  position: relative;
+}
+.group_2 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  min-width: 350px;
+}
+.group_3 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 4px;
+  position: relative;
+}
+.avatar {
+  --ig-size: var(--ig-size-large);
+  --igx-avatar-background: transparent;
+}
+.content {
+  height: max-content;
+  min-width: min-content;
+}
+.chip {
+  width: max-content;
+  height: max-content;
+}
+.icon {
+  --size: 18px;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+.text {
+  color: var(--ig-gray-600);
+  height: max-content;
+  min-width: min-content;
+}

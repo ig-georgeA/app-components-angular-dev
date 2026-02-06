@@ -1,0 +1,132 @@
+:host {
+  height: 100%;
+  padding: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 64px;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  height: 850px;
+  min-height: 50px;
+  max-height: 850px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.row-layout {
+  display: flex;
+}
+.group_1 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 8px;
+  position: relative;
+  padding: 8px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.image-carousel {
+  min-width: 300px;
+  min-height: 240px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.content-carousel {
+  height: 850px;
+  min-width: 300px;
+  min-height: 240px;
+  max-height: 850px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_2 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+}
+.group_3 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  flex-shrink: 0;
+}
+.image {
+  object-fit: cover;
+  width: 64px;
+  height: 64px;
+  min-width: 0;
+  min-height: 0;
+  max-width: 64px;
+  max-height: 64px;
+  flex-shrink: 0;
+}
+.image_1 {
+  object-fit: cover;
+  min-width: 0;
+  min-height: 0;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.image_2 {
+  object-fit: fill;
+  width: 96px;
+  height: 96px;
+  min-width: 0;
+  min-height: 0;
+  max-width: 96px;
+  max-height: 96px;
+}
+.content {
+  text-align: center;
+  height: max-content;
+  min-width: min-content;
+  max-width: 450px;
+}
+.h5 {
+  text-align: center;
+  width: 450px;
+  height: max-content;
+  min-width: min-content;
+  max-width: 450px;
+}
+.carousel-slide {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: absolute;
+}
+.step-1 {
+  background-color: var(--ig-gray-100);
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 16px;
+  position: absolute;
+}
+.button {
+  --ig-size: var(--ig-size-large);
+  height: max-content;
+}
+.button_1 {
+  --ig-size: var(--ig-size-large);
+  height: max-content;
+  flex-shrink: 0;
+}

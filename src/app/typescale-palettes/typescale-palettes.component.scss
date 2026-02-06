@@ -1,0 +1,523 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.row-layout {
+  display: flex;
+}
+.group_1 {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.group_2 {
+  background-color: var(--ig-surface-500);
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  position: relative;
+  padding: 32px;
+  min-width: 550px;
+  min-height: 50px;
+}
+.group_3 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  margin: 0 0 32px;
+  min-width: max-content;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.group_4 {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 64px;
+  position: relative;
+  min-width: 476px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.group_5 {
+  background-color: var(--ig-surface-500);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  padding: 16px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_6 {
+  border-radius: 16px;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 0;
+  overflow: hidden;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_7 {
+  background-color: var(--ig-primary-50);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_8 {
+  background-color: var(--ig-primary-100);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_9 {
+  background-color: var(--ig-primary-200);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_10 {
+  background-color: var(--ig-primary-300);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_11 {
+  background-color: var(--ig-primary-400);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_12 {
+  background-color: var(--ig-primary-500);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_13 {
+  background-color: var(--ig-primary-600);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_14 {
+  background-color: var(--ig-primary-700);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_15 {
+  background-color: var(--ig-primary-800);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_16 {
+  background-color: var(--ig-primary-900);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_17 {
+  background-color: var(--ig-gray-50);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_18 {
+  background-color: var(--ig-gray-100);
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_19 {
+  background-color: var(--ig-gray-200);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_20 {
+  background-color: var(--ig-gray-300);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_21 {
+  background-color: var(--ig-gray-400);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_22 {
+  background-color: var(--ig-gray-500);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_23 {
+  background-color: var(--ig-gray-600);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_24 {
+  background-color: var(--ig-gray-700);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_25 {
+  background-color: var(--ig-gray-800);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_26 {
+  background-color: var(--ig-gray-900);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_27 {
+  background-color: var(--ig-secondary-50);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_28 {
+  background-color: var(--ig-secondary-100);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_29 {
+  background-color: var(--ig-secondary-200);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_30 {
+  background-color: var(--ig-secondary-300);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_31 {
+  background-color: var(--ig-secondary-400);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_32 {
+  background-color: var(--ig-secondary-500);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_33 {
+  background-color: var(--ig-secondary-600);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_34 {
+  background-color: var(--ig-secondary-800);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_35 {
+  background-color: var(--ig-secondary-900);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_36 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 8px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_37 {
+  background-color: var(--ig-surface-500);
+  border-color: var(--ig-gray-200);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_38 {
+  background-color: var(--ig-error-500);
+  border-radius: 8px;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_39 {
+  background-color: var(--ig-success-500);
+  border-radius: 8px;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_40 {
+  background-color: var(--ig-warn-500);
+  border-radius: 8px;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_41 {
+  background-color: var(--ig-info-500);
+  border-radius: 8px;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.content {
+  color: var(--ig-gray-900);
+  margin: 8px;
+  height: max-content;
+  min-width: min-content;
+}
+.content_1 {
+  text-align: center;
+  color: var(--ig-secondary-500);
+  margin: 8px;
+  height: max-content;
+  min-width: min-content;
+}
+.text {
+  text-align: center;
+  color: var(--ig-warn-500);
+  margin: 8px;
+  height: max-content;
+  min-width: min-content;
+}
+.content_2 {
+  text-align: right;
+  color: var(--ig-gray-700);
+  margin: 8px;
+  height: max-content;
+  min-width: min-content;
+}
+.text_1 {
+  text-align: right;
+  color: var(--ig-success-500);
+  margin: 8px;
+  height: max-content;
+  min-width: min-content;
+}
+.text_2 {
+  height: max-content;
+  min-width: min-content;
+}
+.text_3 {
+  color: var(--ig-primary-50-contrast);
+  height: max-content;
+  min-width: min-content;
+}
+.text_4 {
+  color: var(--ig-primary-500-contrast);
+  height: max-content;
+  min-width: min-content;
+}
+.text_5 {
+  color: var(--ig-primary-900-contrast);
+  height: max-content;
+  min-width: min-content;
+}
+.text_6 {
+  color: var(--ig-gray-50-contrast);
+  height: max-content;
+  min-width: min-content;
+}
+.text_7 {
+  color: var(--ig-gray-500-contrast);
+  height: max-content;
+  min-width: min-content;
+}
+.text_8 {
+  color: var(--ig-gray-900-contrast);
+  height: max-content;
+  min-width: min-content;
+}
+.text_9 {
+  color: var(--ig-secondary-50-contrast);
+  height: max-content;
+  min-width: min-content;
+}
+.text_10 {
+  color: var(--ig-secondary-900-contrast);
+  height: max-content;
+  min-width: min-content;
+}

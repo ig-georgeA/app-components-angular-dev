@@ -1,0 +1,86 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.row-layout {
+  display: flex;
+}
+.group_1 {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_2 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 4px;
+  position: relative;
+}
+.group_3 {
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+.grid {
+  --ig-size: var(--ig-size-medium);
+  min-width: 600px;
+  min-height: 300px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.avatar {
+  --ig-size: var(--ig-size-small);
+  --igx-avatar-background: transparent;
+}
+.text {
+  height: max-content;
+  min-width: min-content;
+}
+.chip {
+  width: max-content;
+  height: max-content;
+}
+.icon {
+  --size: 18px;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+.icon_1 {
+  color: var(--ig-secondary-400);
+}
+.icon-button {
+  --foreground: var(--ig-secondary-400);
+  --ig-size: var(--ig-size-small);
+}
+.dropdown {
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: max-content;
+  min-width: min-content;
+}

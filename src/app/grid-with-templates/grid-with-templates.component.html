@@ -1,0 +1,79 @@
+<div class="column-layout group">
+  <igx-grid [data]="northwindAPIIGEmployeeDto" primaryKey="employeeId" rowSelection="multiple" [rowEditable]="true" [allowAdvancedFiltering]="true" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+    <igx-grid-toolbar>
+      <igx-grid-toolbar-actions>
+        <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+        <igx-grid-toolbar-advanced-filtering></igx-grid-toolbar-advanced-filtering>
+      </igx-grid-toolbar-actions>
+      <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+    </igx-grid-toolbar>
+    <igx-column field="lastName" dataType="string" header="Employee name" width="212px" [filterable]="true" [groupable]="true" [sortable]="true" [resizable]="true" required="true" [maxlength]="50" [selectable]="false">
+      <ng-template igxCell let-cell="cell">
+        <div class="row-layout group_1">
+          <igx-avatar [src]="cell.row.data.avatarUrl" shape="rounded" class="avatar"></igx-avatar>
+          <div class="row-layout group_2">
+            <p class="ig-typography__body-2 text">
+              {{ cell.row.data.firstName }}
+            </p>
+            <p class="ig-typography__body-2 text">
+              {{ cell.value }}
+            </p>
+          </div>
+        </div>
+      </ng-template>
+    </igx-column>
+    <igx-column field="title" dataType="string" header="Job title" [filterable]="true" [groupable]="true" [sortable]="true" [resizable]="true" [maxlength]="50" [selectable]="false"></igx-column>
+    <igx-column field="address.region" dataType="string" header="State" width="179px" [filterable]="true" [groupable]="true" [sortable]="true" [resizable]="true" [maxlength]="50" [selectable]="false"></igx-column>
+    <igx-column field="address.city" header="City" width="209px" [filterable]="true" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+    <igx-column field="address.phone" dataType="string" header="Phone" [filterable]="true" [groupable]="true" [sortable]="true" [resizable]="true" pattern="^\+?[0-9][0-9\-]{1,14}$" [selectable]="false">
+      <ng-template igxCell let-cell="cell">
+        <igx-chip class="chip">
+          <igx-prefix>
+            <igx-icon class="icon">
+              phone
+            </igx-icon>
+          </igx-prefix>
+          {{ cell.value }}
+        </igx-chip>
+      </ng-template>
+    </igx-column>
+    <igx-column field="hireDate" header="Hire date" width="189px" [filterable]="true" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+    <igx-column header="Actions" width="77px" [editable]="false" [disablePinning]="true" [selectable]="false">
+      <ng-template igxCell>
+        <div class="row-layout group_3">
+          <button igxIconButton="outlined" [igxToggleAction]="dropdown" class="icon-button">
+            <igx-icon class="icon_1">
+              settings
+            </igx-icon>
+          </button>
+          <igx-drop-down #dropdown class="dropdown">
+            <igx-drop-down-item>
+              <igx-prefix>
+                <igx-icon class="icon">
+                  info
+                </igx-icon>
+              </igx-prefix>
+              View details
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              <igx-prefix>
+                <igx-icon class="icon">
+                  send
+                </igx-icon>
+              </igx-prefix>
+              Share
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              <igx-prefix>
+                <igx-icon class="icon">
+                  delete
+                </igx-icon>
+              </igx-prefix>
+              Delete
+            </igx-drop-down-item>
+          </igx-drop-down>
+        </div>
+      </ng-template>
+    </igx-column>
+  </igx-grid>
+</div>

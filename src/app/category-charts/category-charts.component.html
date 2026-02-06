@@ -1,0 +1,39 @@
+<div class="column-layout group">
+  <igx-category-chart [dataSource]="financialBoxOfficeRevenue" chartType="column" chartTitle="Column" includedProperties="Franchise,TotalWorldBoxOfficeRevenue,HighestGrossingMovieInSeries" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+</div>
+<div class="column-layout group">
+  <igx-category-chart [dataSource]="financialGlobalElectricityDemand" chartType="area" chartTitle="Area" includedProperties="Label,Value" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+</div>
+<div class="column-layout group">
+  <igx-category-chart [dataSource]="financialBoxOfficeRevenue" chartType="point" chartTitle="Point" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+</div>
+<div class="column-layout group">
+  <igx-category-chart [dataSource]="financialBoxOfficeRevenue" chartType="line" chartTitle="Line" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+</div>
+<div class="column-layout group_1">
+  <igx-category-chart [dataSource]="financialBoxOfficeRevenue" chartType="spline" chartTitle="Spline" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+</div>
+<div class="column-layout group_1">
+  <igx-category-chart [dataSource]="financialBoxOfficeRevenue" chartType="splineArea" chartTitle="Spline area" computedPlotAreaMarginMode="series" class="category-chart_1"></igx-category-chart>
+</div>
+<div class="column-layout group_1">
+  <igx-category-chart [dataSource]="financialBoxOfficeRevenue" chartType="stepArea" chartTitle="Step area" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+</div>
+<div class="column-layout group_1">
+  <igx-category-chart [dataSource]="financialBoxOfficeRevenue" chartType="stepLine" chartTitle="Step line" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+</div>
+<div class="column-layout group_1">
+  <igx-category-chart [dataSource]="financialTrading" chartType="waterfall" chartTitle="Waterfall" includedProperties="category,openPrice" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+</div>
+<div class="column-layout group_1">
+  <h6 class="h6">
+    Pie chart with start angle 270deg
+  </h6>
+  <igx-pie-chart [dataSource]="financialGlobalElectricityDemand" [startAngle]="stringToNumber('270')" labelMemberPath="Label" valueMemberPath="Value" class="pie-chart"></igx-pie-chart>
+</div>
+<div class="column-layout group_1">
+  <h6 class="h6">
+    Pie chart with label outside + others 20%
+  </h6>
+  <igx-pie-chart [dataSource]="financialGlobalElectricityDemand" labelsPosition="outsideEnd" [othersCategoryThreshold]="20" labelMemberPath="Label" valueMemberPath="Value" class="pie-chart"></igx-pie-chart>
+</div>

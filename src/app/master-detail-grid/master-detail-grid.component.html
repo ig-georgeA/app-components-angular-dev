@@ -1,0 +1,58 @@
+<igx-grid [data]="northwindAPIIGEmployeeDto" primaryKey="employeeId" rowSelection="single" [hideRowSelectors]="true" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+  <igx-column field="employeeId" dataType="number" header="employeeId" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+  <igx-column field="lastName" dataType="string" header="lastName" [filterable]="true" [sortable]="true" required="true" [maxlength]="50" [selectable]="false"></igx-column>
+  <igx-column field="firstName" dataType="string" header="firstName" [filterable]="true" [sortable]="true" [maxlength]="50" [selectable]="false"></igx-column>
+  <igx-column field="title" dataType="string" header="title" [filterable]="true" [sortable]="true" [maxlength]="50" [selectable]="false"></igx-column>
+  <igx-column field="titleOfCourtesy" dataType="string" header="titleOfCourtesy" [filterable]="true" [sortable]="true" [maxlength]="50" [selectable]="false"></igx-column>
+  <igx-column field="birthDate" dataType="date" header="birthDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+  <igx-column field="hireDate" dataType="date" header="hireDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+  <igx-column field="addressId" dataType="string" header="addressId" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+  <igx-column field="address.street" dataType="string" header="address street" [filterable]="true" [sortable]="true" [maxlength]="100" [selectable]="false"></igx-column>
+  <igx-column field="address.city" dataType="string" header="address city" [filterable]="true" [sortable]="true" [maxlength]="50" [selectable]="false"></igx-column>
+  <igx-column field="address.region" dataType="string" header="address region" [filterable]="true" [sortable]="true" [maxlength]="50" [selectable]="false"></igx-column>
+  <igx-column field="address.postalCode" dataType="string" header="address postalCode" [filterable]="true" [sortable]="true" [maxlength]="20" [selectable]="false"></igx-column>
+  <igx-column field="address.country" dataType="string" header="address country" [filterable]="true" [sortable]="true" [maxlength]="50" [selectable]="false"></igx-column>
+  <igx-column field="address.phone" dataType="string" header="address phone" [filterable]="true" [sortable]="true" pattern="^\+?[0-9][0-9\-]{1,14}$" [selectable]="false"></igx-column>
+  <igx-column field="notes" dataType="string" header="notes" [filterable]="true" [sortable]="true" [maxlength]="1000" [selectable]="false"></igx-column>
+  <igx-column field="avatarUrl" dataType="string" header="avatarUrl" [filterable]="true" [sortable]="true" pattern="^https?:\/\/.+\..+" [selectable]="false"></igx-column>
+  <igx-column field="reportsTo" dataType="number" header="reportsTo" [filterable]="true" [sortable]="true" [min]="1" [max]="2147483647" [selectable]="false"></igx-column>
+  <ng-template igxGridDetail let-rowData>
+    <div class="row-layout group">
+      <igx-avatar [src]="rowData.avatarUrl" shape="rounded" class="avatar"></igx-avatar>
+      <div class="column-layout group_1">
+        <div class="row-layout group_2">
+          <div class="row-layout group_3">
+            <h6 class="content">
+              {{ rowData.firstName }}
+            </h6>
+            <h6 class="content">
+              {{ rowData.lastName }}
+            </h6>
+          </div>
+          <igx-chip class="chip">
+            <igx-prefix>
+              <igx-icon class="icon">
+                phone
+              </igx-icon>
+            </igx-prefix>
+            {{ rowData.address.phone }}
+          </igx-chip>
+        </div>
+        <p class="content">
+          {{ rowData.title }}
+        </p>
+        <div class="row-layout group_3">
+          <p class="ig-typography__caption text">
+            {{ rowData.address.street }}
+          </p>
+          <p class="ig-typography__caption text">
+            {{ rowData.address.city }}
+          </p>
+          <p class="ig-typography__caption text">
+            {{ rowData.address.country }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</igx-grid>

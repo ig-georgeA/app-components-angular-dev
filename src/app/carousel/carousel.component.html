@@ -1,0 +1,84 @@
+<div class="column-layout group">
+  <div class="row-layout group_1">
+    <img src="/assets/Avatar2.png" alt="" (click)="imageCarousel.next()" class="image" />
+    <img src="/assets/Avatar3.png" alt="" class="image" />
+    <img src="/assets/Avatar9.png" alt="" class="image" />
+    <img src="/assets/Avatar7.png" alt="" class="image" />
+  </div>
+  <igx-carousel [vertical]="false" animationType="fade" [interval]="3000" indicatorsOrientation="end" [pause]="false" #imageCarousel class="image-carousel">
+    <igx-slide class="row-layout carousel-slide">
+      <img src="/assets/Avatar2.png" alt="" class="image_1" />
+    </igx-slide>
+    <igx-slide class="row-layout carousel-slide">
+      <img src="/assets/Avatar3.png" alt="" class="image_1" />
+    </igx-slide>
+    <igx-slide class="row-layout carousel-slide">
+      <img src="/assets/Avatar9.png" alt="" class="image_1" />
+    </igx-slide>
+    <igx-slide class="row-layout carousel-slide">
+      <img src="/assets/Avatar7.png" alt="" class="image_1" />
+    </igx-slide>
+  </igx-carousel>
+</div>
+<igx-carousel [vertical]="false" [navigation]="false" animationType="slide" [indicators]="false" #contentCarousel class="content-carousel">
+  <igx-slide class="column-layout step-1">
+    <img src="/assets/appt-upcoming.svg" alt="" class="image_2" />
+    <h3 class="content">
+      Super charged events
+    </h3>
+    <h5 class="content">
+      Use the automated scheduling feature to make calendars a blast to use
+    </h5>
+    <button igxButton="outlined" type="button" (click)="contentCarousel.next()" class="button">
+      Next
+    </button>
+  </igx-slide>
+  <igx-slide class="column-layout step-1">
+    <img src="/assets/logo2.svg" alt="" class="image_2" />
+    <h3 class="content">
+      Health at fingertips
+    </h3>
+    <h5 class="h5">
+      Use the automated scheduling feature to make calendars a blast to use
+    </h5>
+    <div class="row-layout group_2">
+      <button igxButton="outlined" type="button" (click)="contentCarousel.prev()" class="button_1">
+        Back
+      </button>
+      <button igxButton="outlined" type="button" (click)="contentCarousel.next()" class="button_1">
+        Next
+      </button>
+    </div>
+  </igx-slide>
+  <igx-slide class="column-layout step-1">
+    <img src="/assets/Scale_Color.svg" alt="" class="image_2" />
+    <h3 class="content">
+      Track resource allocation
+    </h3>
+    <h5 class="h5">
+      Use the automated scheduling feature to make calendars a blast to use
+    </h5>
+    <div class="row-layout group_3">
+      <button igxButton="outlined" type="button" (click)="contentCarousel.prev()" class="button_1">
+        Back
+      </button>
+      <button igxButton="outlined" type="button" (click)="contentCarousel.next()" class="button_1">
+        Next
+      </button>
+    </div>
+  </igx-slide>
+  <igx-slide class="column-layout step-1">
+    <img src="/assets/meds-expired.svg" alt="" class="image_2" />
+    <h3 class="content">
+      Medication reminders
+    </h3>
+    <h5 class="h5">
+      Use the automated scheduling feature to make calendars a blast to use
+    </h5>
+    <div (click)="contentCarousel.prev()" class="row-layout group_3">
+      <button igxButton="outlined" type="button" (click)="contentCarousel.prev()" class="button_1">
+        Back
+      </button>
+    </div>
+  </igx-slide>
+</igx-carousel>

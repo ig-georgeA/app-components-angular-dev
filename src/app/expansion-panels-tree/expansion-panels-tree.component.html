@@ -1,0 +1,185 @@
+<div class="column-layout group">
+  <igx-card class="card">
+    <igx-card-header>
+      <div igxCardThumbnail>
+        <igx-avatar src="/assets/Avatar9.png" shape="circle" class="avatar"></igx-avatar>
+      </div>
+      <h3 igxCardHeaderTitle>
+        FirstName LastName
+      </h3>
+      <h5 igxCardHeaderSubtitle>
+        myemail&#64;email.com
+      </h5>
+    </igx-card-header>
+    <igx-card-actions class="actions-content">
+      <ng-container igxEnd>
+        <button igxButton="flat" type="button" class="button">
+          <igx-icon>
+            exit_to_app
+          </igx-icon>
+          <span>Sign out</span>
+        </button>
+      </ng-container>
+    </igx-card-actions>
+  </igx-card>
+  <igx-accordion [singleBranchExpand]="true" class="accordion">
+    <igx-expansion-panel [collapsed]="false">
+      <igx-expansion-panel-body>
+        <igx-list class="list">
+          <igx-list-item [selected]="this.listSelectedItem4 != null && this.listSelectedItem4 === '0'" (click)="listSelectedItem4 = '0'">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="avatar_1">
+                <igx-icon>
+                  person
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>User profile</span>
+          </igx-list-item>
+          <igx-list-item [selected]="this.listSelectedItem4 != null && this.listSelectedItem4 === '1'" (click)="listSelectedItem4 = '1'">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="avatar_1">
+                <igx-icon>
+                  assessment
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>Analytics</span>
+          </igx-list-item>
+          <igx-list-item [selected]="this.listSelectedItem4 != null && this.listSelectedItem4 === '2'" (click)="listSelectedItem4 = '2'">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="avatar_1">
+                <igx-icon>
+                  book
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>Favorites</span>
+          </igx-list-item>
+          <igx-list-item [selected]="this.listSelectedItem4 != null && this.listSelectedItem4 === '3'" (click)="listSelectedItem4 = '3'">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="avatar_1">
+                <igx-icon>
+                  people
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>Shared with others</span>
+          </igx-list-item>
+        </igx-list>
+      </igx-expansion-panel-body>
+      <igx-expansion-panel-header iconPosition="right">
+        <igx-expansion-panel-title>Account</igx-expansion-panel-title>
+      </igx-expansion-panel-header>
+    </igx-expansion-panel>
+    <igx-expansion-panel>
+      <igx-expansion-panel-body>
+        <img src="/assets/SketchParser.png" alt="" class="image" />
+      </igx-expansion-panel-body>
+      <igx-expansion-panel-header iconPosition="right">
+        <igx-expansion-panel-title>Preferences</igx-expansion-panel-title>
+      </igx-expansion-panel-header>
+    </igx-expansion-panel>
+    <igx-expansion-panel>
+      <igx-expansion-panel-body>
+        <p class="ig-typography__body-2 text">
+          Expanded Panel - The body was generated in an additional frame that doubles the horizontal and vertical padding.
+        </p>
+      </igx-expansion-panel-body>
+      <igx-expansion-panel-header iconPosition="right">
+        <igx-expansion-panel-title>Text content</igx-expansion-panel-title>
+      </igx-expansion-panel-header>
+    </igx-expansion-panel>
+  </igx-accordion>
+</div>
+<div class="row-layout row-layout-1">
+  <div class="column-layout column-layout-1">
+    <h5 class="title-1">
+      Sign in
+    </h5>
+    <igx-input-group type="box" class="input-group-1">
+      <input type="text" [(ngModel)]="value" igxInput />
+      <label igxLabel>Username</label>
+    </igx-input-group>
+    <igx-input-group type="box" class="input-group-1_1">
+      <input type="password" [(ngModel)]="value1" igxInput />
+      <label igxLabel>Password</label>
+    </igx-input-group>
+    <div class="row-layout row-layout-2">
+      <igx-checkbox labelPosition="after" [(ngModel)]="checked" class="checkbox-1">
+        Remember me
+      </igx-checkbox>
+      <a target="_blank" class="ig-typography__body-1 hyperlink">
+        Forgot password?
+      </a>
+    </div>
+    <button igxButton="contained" type="button" class="button-1">
+      Sign in
+    </button>
+    <button igxButton="outlined" type="button" class="button-1_1">
+      Create a new account
+    </button>
+    <p class="ig-typography__caption text-2">
+      By signing in, you are agreeing to our terms of use and privacy policy
+    </p>
+  </div>
+</div>
+<div class="column-layout group_1">
+  <div class="column-layout group_2">
+    <div class="row-layout group_3">
+      <p class="text_1">
+        Data bound tree
+      </p>
+    </div>
+    <igx-tree class="tree">
+      @for (item of nestedDataRepeatNestedData?.components!; track item) {
+        <igx-tree-node>
+          @for (item1 of item?.propertiesPanel!; track item1) {
+            <igx-tree-node>
+              @for (item2 of item1?.content!; track item2) {
+                <igx-tree-node [expanded]="true">
+                  {{ item2.name }}
+                </igx-tree-node>
+              }
+              {{ item1.name }}
+            </igx-tree-node>
+          }
+          {{ item.name }}
+        </igx-tree-node>
+      }
+    </igx-tree>
+  </div>
+  <div class="column-layout group_4">
+    <div class="row-layout group_5">
+      <p class="text_1">
+        Static tree
+      </p>
+    </div>
+    <igx-tree class="tree_1">
+      <igx-tree-node>
+        <igx-tree-node [expanded]="true">
+          Figma
+        </igx-tree-node>
+        <igx-tree-node [expanded]="true">
+          Adobe XD
+        </igx-tree-node>
+        <igx-tree-node [expanded]="true">
+          Sketch
+        </igx-tree-node>
+        Design
+      </igx-tree-node>
+      <igx-tree-node>
+        <igx-tree-node [expanded]="true">
+          Angular
+        </igx-tree-node>
+        <igx-tree-node [expanded]="true">
+          Blazor
+        </igx-tree-node>
+        <igx-tree-node [expanded]="true">
+          Web components
+        </igx-tree-node>
+        Development
+      </igx-tree-node>
+    </igx-tree>
+  </div>
+</div>

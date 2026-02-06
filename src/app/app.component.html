@@ -1,0 +1,288 @@
+<igx-navbar class="navbar">
+  <igx-navbar-action>
+    <button igxIconButton="flat" [igxToggleAction]="navDrawer">
+      <igx-icon>
+        menu
+      </igx-icon>
+    </button>
+  </igx-navbar-action>
+  <igx-navbar-title class="navbar-content">
+    <h6 class="h6">
+      App builder demos
+    </h6>
+  </igx-navbar-title>
+  <button igxIconButton="flat" class="icon-button">
+    <igx-icon>
+      search
+    </igx-icon>
+  </button>
+  <button igxIconButton="flat">
+    <igx-icon>
+      favorite
+    </igx-icon>
+  </button>
+  <button igxIconButton="flat">
+    <igx-icon>
+      more_vert
+    </igx-icon>
+  </button>
+</igx-navbar>
+<div class="row-layout group">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" [pinThreshold]="stringToNumber('1200')" width="280px" #navDrawer class="nav-drawer">
+    <ng-template igxDrawerMini>
+      <div igxDrawerItem>
+        <igx-icon class="icon">
+          list_alt
+        </igx-icon>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/dialogs-and-dropdowns`)" [routerLink]="[`/dialogs-and-dropdowns`]">
+        <igx-icon class="icon">
+          open_in_new
+        </igx-icon>
+      </div>
+      <div igxDrawerItem>
+        <igx-icon class="icon">
+          keyboard
+        </igx-icon>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/position`)" [routerLink]="[`/position`]">
+        <igx-icon class="icon">
+          my_location
+        </igx-icon>
+      </div>
+      <div igxDrawerItem>
+        <igx-icon class="icon">
+          tab
+        </igx-icon>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/card-calendar`)" [routerLink]="[`/card-calendar`]">
+        <igx-icon class="icon">
+          expand_more
+        </igx-icon>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/pickers-combo`)" [routerLink]="[`/pickers-combo`]">
+        <igx-icon class="icon">
+          arrow_drop_down_circle
+        </igx-icon>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/typescale-palettes`)" [routerLink]="[`/typescale-palettes`]">
+        <igx-icon class="icon">
+          text_fields
+        </igx-icon>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/expansion-panels-tree`)" [routerLink]="[`/expansion-panels-tree`]">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/layouts`)" [routerLink]="[`/layouts`]">
+        <igx-icon class="icon">
+          view_quilt
+        </igx-icon>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/inputs`)" [routerLink]="[`/inputs`]">
+        <igx-icon class="icon">
+          keyboard
+        </igx-icon>
+      </div>
+      <div igxDrawerItem>
+        <igx-icon class="icon">
+          remove_red_eye
+        </igx-icon>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/grid`)" [routerLink]="[`/grid`]">
+        <igx-icon class="icon">
+          list_alt
+        </igx-icon>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/expansion-panels-tree`)" [routerLink]="[`/expansion-panels-tree`]">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+      </div>
+    </ng-template>
+    <ng-template igxDrawer>
+      <div class="row-layout group_1">
+        <igx-avatar src="/assets/Avatar2.png" shape="rounded" class="avatar"></igx-avatar>
+        <div class="column-layout group_2">
+          <p class="ig-typography__subtitle-1 text">
+            Welcome, Guest
+          </p>
+          <a target="_blank" class="ig-typography__body-1 hyperlink">
+            Edit profile
+          </a>
+        </div>
+      </div>
+      <div [isHeader]="true" igxDrawerItem>
+        <span>Grids</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/grid`)" [routerLink]="[`/grid`]">
+        <igx-icon class="icon_1">
+          table_chart
+        </igx-icon>
+        <span>Grid w/ remote paging</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/grid-with-templates`)" [routerLink]="[`/grid-with-templates`]">
+        <igx-icon class="icon_1">
+          account_circle
+        </igx-icon>
+        <span>Grid with templates</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/tree-grid`)" [routerLink]="[`/tree-grid`]">
+        <igx-icon class="icon_1">
+          park
+        </igx-icon>
+        <span>Tree grid</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/hierarchical-grid`)" [routerLink]="[`/hierarchical-grid`]">
+        <igx-icon class="icon_1">
+          account_tree
+        </igx-icon>
+        <span>Hierarchical grid</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/master-detail-grid`)" [routerLink]="[`/master-detail-grid`]">
+        <igx-icon class="icon_1">
+          unfold_more
+        </igx-icon>
+        <span>Master-detail grid</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/pivot-grid`)" [routerLink]="[`/pivot-grid`]">
+        <igx-icon class="icon_1">
+          pivot_table_chart
+        </igx-icon>
+        <span>Pivot grid</span>
+      </div>
+      <div [isHeader]="true" igxDrawerItem>
+        <span>Inputs</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/inputs`)" [routerLink]="[`/inputs`]">
+        <igx-icon class="icon_1">
+          keyboard
+        </igx-icon>
+        <span>Inputs + buttons</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/pickers-combo`)" [routerLink]="[`/pickers-combo`]">
+        <igx-icon class="icon_1">
+          arrow_drop_down_circle
+        </igx-icon>
+        <span>Pickers</span>
+      </div>
+      <div [isHeader]="true" igxDrawerItem>
+        <span>Content</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/card-calendar`)" [routerLink]="[`/card-calendar`]">
+        <igx-icon class="icon_1">
+          calendar_today
+        </igx-icon>
+        <span>Card-Calendar</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/lists-data`)" [routerLink]="[`/lists-data`]">
+        <igx-icon class="icon_1">
+          list
+        </igx-icon>
+        <span>List + data</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/reveal`)" [routerLink]="[`/reveal`]">
+        <igx-icon class="icon_1">
+          dashboard
+        </igx-icon>
+        <span>Reveal</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/category-charts`)" [routerLink]="[`/category-charts`]">
+        <igx-icon class="icon_1">
+          insert_chart_outlined
+        </igx-icon>
+        <span>Category charts</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/financial-chart`)" [routerLink]="[`/financial-chart`]">
+        <igx-icon class="icon_1">
+          waterfall_chart
+        </igx-icon>
+        <span>Financial chart</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/apex-charts`)" [routerLink]="[`/apex-charts`]">
+        <igx-icon class="icon_1">
+          bubble_chart
+        </igx-icon>
+        <span>Apex charts</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/typescale-palettes`)" [routerLink]="[`/typescale-palettes`]">
+        <igx-icon class="icon_1">
+          palette
+        </igx-icon>
+        <span>Typescale + palettes</span>
+      </div>
+      <div [isHeader]="true" igxDrawerItem>
+        <span>Layouts</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/expansion-panels-tree`)" [routerLink]="[`/expansion-panels-tree`]">
+        <igx-icon class="icon_1">
+          open_in_full
+        </igx-icon>
+        <span>Expansion panels</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/stepper`)" [routerLink]="[`/stepper`]">
+        <igx-icon class="icon_1">
+          arrow_forward
+        </igx-icon>
+        <span>Stepper</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/carousel`)" [routerLink]="[`/carousel`]">
+        <igx-icon class="icon_1">
+          collections
+        </igx-icon>
+        <span>Carousel</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/tab-layout`)" [routerLink]="[`/tab-layout`]">
+        <igx-icon class="icon_1">
+          tab
+        </igx-icon>
+        <span>Tab layout</span>
+      </div>
+      <div [isHeader]="true" igxDrawerItem>
+        <span>Notifications</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/dialogs-and-dropdowns`)" [routerLink]="[`/dialogs-and-dropdowns`]">
+        <igx-icon class="icon_1">
+          open_in_new
+        </igx-icon>
+        <span>Dialogs and overlays</span>
+      </div>
+      <div [isHeader]="true" igxDrawerItem>
+        <span>Misc</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/image`)" [routerLink]="[`/image`]">
+        <igx-icon class="icon_1">
+          account_circle
+        </igx-icon>
+        <span>Images</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/position`)" [routerLink]="[`/position`]">
+        <igx-icon class="icon_1">
+          my_location
+        </igx-icon>
+        <span>Position</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/layouts`)" [routerLink]="[`/layouts`]">
+        <igx-icon class="icon_1">
+          view_quilt
+        </igx-icon>
+        <span>Flex layouts</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/css-grid-layout`)" [routerLink]="[`/css-grid-layout`]">
+        <igx-icon class="icon_1">
+          grid_view
+        </igx-icon>
+        <span>CSS grid</span>
+      </div>
+      <div class="column-layout group_3">
+        <p class="ig-typography__body-2 text_1">
+          Last updated Sep 04, 2025
+        </p>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

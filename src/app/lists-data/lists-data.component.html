@@ -1,0 +1,166 @@
+<div class="row-layout group">
+  @for (item of northwindAPIIGEmployeeDto; track item) {
+    <igx-card [horizontal]="true" class="card">
+      <div class="group_1">
+        <igx-card-header>
+          <h3 igxCardHeaderTitle>
+            {{ item.lastName }}
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+            {{ item.title }}
+          </h5>
+        </igx-card-header>
+        <igx-card-actions class="actions-content">
+          <ng-container igxStart>
+            <button igxButton="flat" type="button" [routerLink]="[`/layouts`]" class="button">
+              Details
+            </button>
+          </ng-container>
+        </igx-card-actions>
+      </div>
+      <igx-card-media width="100px" class="media-content">
+        <img [src]="item.avatarUrl" alt="" class="image" />
+      </igx-card-media>
+    </igx-card>
+  }
+</div>
+<div class="row-layout group_2">
+  <igx-list class="list">
+    <igx-list-item [isHeader]="true">Small list</igx-list-item>
+    <igx-list-item [selected]="this.listSelectedItem != null && this.listSelectedItem === '1'" (click)="listSelectedItem = '1'">
+      <span igxListThumbnail>
+        <igx-avatar shape="circle" class="avatar">
+          <igx-icon>
+            home
+          </igx-icon>
+        </igx-avatar>
+      </span>
+      <span igxListLineTitle>Home</span>
+    </igx-list-item>
+    <igx-list-item [selected]="this.listSelectedItem != null && this.listSelectedItem === '2'" (click)="listSelectedItem = '2'">
+      <span igxListThumbnail>
+        <igx-avatar shape="circle" class="avatar">
+          <igx-icon>
+            business
+          </igx-icon>
+        </igx-avatar>
+      </span>
+      <span igxListLineTitle>Accounts</span>
+    </igx-list-item>
+    <igx-list-item [selected]="this.listSelectedItem != null && this.listSelectedItem === '3'" (click)="listSelectedItem = '3'">
+      <span igxListThumbnail>
+        <igx-avatar shape="circle" class="avatar">
+          <igx-icon>
+            person_outline
+          </igx-icon>
+        </igx-avatar>
+      </span>
+      <span igxListLineTitle>Contacts</span>
+    </igx-list-item>
+    <igx-list-item [selected]="this.listSelectedItem != null && this.listSelectedItem === '4'" (click)="listSelectedItem = '4'">
+      <span igxListThumbnail>
+        <igx-avatar shape="circle" class="avatar">
+          <igx-icon>
+            inbox
+          </igx-icon>
+        </igx-avatar>
+      </span>
+      <span igxListLineTitle>Contracts</span>
+    </igx-list-item>
+    <igx-list-item [selected]="this.listSelectedItem != null && this.listSelectedItem === '5'" (click)="listSelectedItem = '5'">
+      <span igxListThumbnail>
+        <igx-avatar shape="circle" class="avatar">
+          <igx-icon>
+            bar_chart
+          </igx-icon>
+        </igx-avatar>
+      </span>
+      <span igxListLineTitle>Reports</span>
+    </igx-list-item>
+    <igx-list-item [selected]="this.listSelectedItem != null && this.listSelectedItem === '6'" (click)="listSelectedItem = '6'">
+      <span igxListThumbnail>
+        <igx-avatar shape="circle" class="avatar">
+          <igx-icon>
+            calendar_today
+          </igx-icon>
+        </igx-avatar>
+      </span>
+      <span igxListLineTitle>Calendar</span>
+    </igx-list-item>
+    <igx-list-item [selected]="this.listSelectedItem != null && this.listSelectedItem === '7'" (click)="listSelectedItem = '7'">
+      <span igxListThumbnail>
+        <igx-avatar shape="circle" class="avatar">
+          <igx-icon>
+            assignment_turned_in
+          </igx-icon>
+        </igx-avatar>
+      </span>
+      <span igxListLineTitle>Tasks</span>
+    </igx-list-item>
+  </igx-list>
+  <div class="column-layout group_3">
+    <igx-list class="list_1">
+      <igx-list-item [selected]="this.listSelectedItem1 != null && this.listSelectedItem1 === '0'" (click)="listSelectedItem1 = '0'">
+        <span igxListThumbnail>
+          <igx-avatar shape="circle" class="avatar_1"></igx-avatar>
+        </span>
+        <span igxListLineTitle>Title goes here</span>
+      </igx-list-item>
+      @for (item of northwindAPIIGEmployeeDto; track item) {
+        <igx-list-item [selected]="this.listSelectedItem2 != null && this.listSelectedItem2 === item && this.listSelectedItem1 != null && this.listSelectedItem1 === '1'" (click)="clickListItem(item)">
+          <span igxListThumbnail>
+            <igx-avatar [src]="item.avatarUrl ?? ''" shape="circle" class="avatar_1"></igx-avatar>
+          </span>
+          <span igxListLineTitle>{{ item.lastName }}</span>
+          <span igxListLineSubTitle>{{ item.title }}</span>
+          <span igxListAction>
+            <igx-icon class="icon">
+              arrow_forward
+            </igx-icon>
+          </span>
+        </igx-list-item>
+      }
+    </igx-list>
+  </div>
+  <div class="column-layout group_4">
+    <igx-list class="list_2">
+      @for (item of northwindAPIIGEmployeeDto; track item) {
+        <igx-list-item [selected]="this.listSelectedItem3 != null && this.listSelectedItem3 === item" (click)="listSelectedItem3 = item">
+          <span igxListThumbnail>
+            <igx-avatar [src]="item.avatarUrl ?? ''" class="avatar_1"></igx-avatar>
+          </span>
+          <span igxListLineTitle>{{ item.lastName }}</span>
+          <span igxListLineSubTitle>{{ item.title }}</span>
+          <span igxListLine>
+            <div class="row-layout group_5">
+              <div class="column-layout group_6">
+                <p class="ig-typography__caption text">
+                  Birthday
+                </p>
+                <p class="ig-typography__caption text_1">
+                  {{ item.birthDate }}
+                </p>
+              </div>
+              <div class="column-layout group_6">
+                <p class="ig-typography__caption text">
+                  Hire date
+                </p>
+                <p class="ig-typography__caption text_1">
+                  {{ item.hireDate }}
+                </p>
+              </div>
+              <div class="column-layout group_6">
+                <p class="ig-typography__caption text">
+                  Profile
+                </p>
+                <a href="https://appbuilder.dev" target="_blank" class="ig-typography__caption hyperlink">
+                  edit
+                </a>
+              </div>
+            </div>
+          </span>
+        </igx-list-item>
+      }
+    </igx-list>
+  </div>
+</div>

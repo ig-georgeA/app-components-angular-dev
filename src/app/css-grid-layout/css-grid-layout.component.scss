@@ -1,0 +1,46 @@
+:host {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: stretch;
+  align-items: stretch;
+  gap: 32px;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  overflow: auto;
+  position: relative;
+  grid-row-end: span 2;
+}
+.list {
+  height: max-content;
+  grid-row-end: span 2;
+}
+.grid {
+  --ig-size: var(--ig-size-medium);
+  position: relative;
+  min-width: 600px;
+  min-height: 300px;
+  grid-column-end: span 2;
+}
+.avatar {
+  --ig-size: var(--ig-size-small);
+}
+.icon {
+  --size: 24px;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+.financial-chart {
+  min-width: 400px;
+  min-height: 300px;
+  grid-column-end: span 2;
+}

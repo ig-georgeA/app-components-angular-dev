@@ -1,0 +1,266 @@
+<div class="row-layout group">
+  <div class="column-layout group_1">
+    <button igxButton="contained" type="button" (click)="alert.toggle()" class="button">
+      <igx-icon>
+        open_in_new
+      </igx-icon>
+      <span>Open alert dialog</span>
+    </button>
+    <button igxButton="contained" type="button" (click)="confirm.toggle()" class="button">
+      <igx-icon>
+        open_in_new
+      </igx-icon>
+      <span>Open confirmation dialog</span>
+    </button>
+  </div>
+  <div class="row-layout group_2">
+    <button igxButton="contained" type="button" (click)="customContentDialog.toggle()" class="button_1">
+      <igx-icon>
+        open_in_new
+      </igx-icon>
+      <span>Open custom dialog</span>
+    </button>
+  </div>
+  <div class="column-layout group_3">
+    <h3 class="h3">
+      Demo zone
+    </h3>
+  </div>
+</div>
+<div class="row-layout group">
+  <div class="row-layout group_4">
+    <button igxButton="contained" type="button" (click)="snackbar.toggle()" class="button_1">
+      <igx-icon>
+        open_in_new
+      </igx-icon>
+      <span>Open snackbar</span>
+    </button>
+  </div>
+  <div class="column-layout group_5">
+    <igx-banner #bannerInside class="banner-inside">
+      <p>
+        This is important! Can you make some room?
+      </p>
+      <igx-banner-actions>
+        <button igxButton="flat" type="button" (click)="bannerInside.toggle()" class="button">
+          Dismiss
+        </button>
+      </igx-banner-actions>
+      <igx-icon class="icon">
+        waving_hand
+      </igx-icon>
+    </igx-banner>
+    <div class="column-layout group_6">
+      <button igxButton="contained" type="button" (click)="bannerInside.toggle()" class="button">
+        <igx-icon>
+          open_in_new
+        </igx-icon>
+        <span>Open banner (inside)</span>
+      </button>
+      <button igxButton="contained" type="button" (click)="bannerOutside.toggle()" class="button">
+        <igx-icon>
+          open_in_new
+        </igx-icon>
+        <span>Open banner (outside)</span>
+      </button>
+    </div>
+  </div>
+  <div class="column-layout group_7">
+    <button igxButton="contained" type="button" [igxToggleAction]="dropdown" class="button">
+      <span>More options</span>
+      <igx-icon>
+        expand_more
+      </igx-icon>
+    </button>
+    <button igxButton="contained" type="button" [igxToggleAction]="dropdown" class="button">
+      <span>More options</span>
+      <igx-icon>
+        expand_more
+      </igx-icon>
+    </button>
+    <igx-drop-down #dropdown class="dropdown">
+      <igx-drop-down-item [isHeader]="true">
+        Header 1
+      </igx-drop-down-item>
+      <igx-drop-down-item>
+        <igx-prefix>
+          <igx-icon class="icon_1">
+            content_cut
+          </igx-icon>
+        </igx-prefix>
+        <igx-suffix>
+          <p class="ig-typography__caption text">
+            Cmd + X
+          </p>
+        </igx-suffix>
+        Cut
+      </igx-drop-down-item>
+      <igx-drop-down-item>
+        <igx-prefix>
+          <igx-icon class="icon_1">
+            content_copy
+          </igx-icon>
+        </igx-prefix>
+        <igx-suffix>
+          <p class="ig-typography__caption text">
+            Cmd + C
+          </p>
+        </igx-suffix>
+        Copy
+      </igx-drop-down-item>
+      <igx-drop-down-item>
+        <igx-prefix>
+          <igx-icon class="icon_1">
+            content_paste
+          </igx-icon>
+        </igx-prefix>
+        <igx-suffix>
+          <p class="ig-typography__caption text">
+            Cmd + V
+          </p>
+        </igx-suffix>
+        Paste
+      </igx-drop-down-item>
+      <igx-drop-down-item [isHeader]="true">
+        Header 2
+      </igx-drop-down-item>
+      <igx-drop-down-item disabled="true">
+        <igx-prefix>
+          <igx-icon class="icon_1">
+            account_circle
+          </igx-icon>
+        </igx-prefix>
+        Option 2.1
+      </igx-drop-down-item>
+    </igx-drop-down>
+  </div>
+</div>
+<igx-dialog [closeOnOutsideSelect]="true" #alert class="alert">
+  <ng-container>
+    <p>In this accelerator, we'll show you how to use various controls for alerts, pop-up messages, data entry screens, and more in App Builder.</p>
+  </ng-container>
+  <igx-dialog-actions>
+    <button igxButton="flat" (click)="alert.toggle()">
+      Cancel
+    </button>
+    <button igxButton="flat" (click)="alert.toggle()">
+      OK
+    </button>
+  </igx-dialog-actions>
+</igx-dialog>
+<igx-dialog [closeOnOutsideSelect]="true" #confirm class="alert">
+  <igx-dialog-title>
+    <h5>
+      Show custom dialog?
+    </h5>
+  </igx-dialog-title>
+  <ng-container>
+    <p>In this accelerator, we'll show you how to use various controls for alerts, pop-up messages, data entry screens, and more in App Builder.</p>
+  </ng-container>
+  <igx-dialog-actions>
+    <button igxButton="flat" (click)="confirm.toggle()">
+      Cancel
+    </button>
+    <button igxButton="flat" (click)="customContentDialog.toggle()">
+      Show me
+    </button>
+  </igx-dialog-actions>
+</igx-dialog>
+<igx-dialog [closeOnOutsideSelect]="true" #customContentDialog class="alert">
+  <ng-container>
+    <div class="row-layout custom-header">
+      <h6 class="content">
+        My custom title
+      </h6>
+      <button igxIconButton="flat" (click)="customContentDialog.toggle()">
+        <igx-icon>
+          close
+        </igx-icon>
+      </button>
+    </div>
+    <div class="column-layout custom-content">
+      <igx-banner #bannerInline class="banner-inline">
+        <p>
+          Email is required!
+        </p>
+        <igx-banner-actions>
+          <button igxButton="flat" type="button" (click)="bannerInline.toggle()" class="button">
+            Dismiss
+          </button>
+        </igx-banner-actions>
+        <igx-icon class="icon_2">
+          report
+        </igx-icon>
+      </igx-banner>
+      <img src="/assets/SketchParser.png" alt="" class="image" />
+      <p class="content">
+        Use the Ignite UI Dialog Window component to display messages or present forms for users to fill out. The component opens a dialog window centered on top of app content. You can also provide a standard alert message that users can cancel.
+      </p>
+      <div class="column-layout form-fields">
+        <igx-input-group type="border" class="input">
+          <input type="text" [(ngModel)]="value" required="true" igxInput #igxInput />
+          <label igxLabel>Email</label>
+          @if (igxInput.validity.valueMissing) {
+            <igx-hint>This field is required</igx-hint>
+          }
+        </igx-input-group>
+        <igx-input-group type="border" class="input">
+          <input type="text" [(ngModel)]="value1" igxInput />
+          <label igxLabel>Name </label>
+        </igx-input-group>
+        <div class="row-layout custom-actions">
+          <button igxButton="flat" type="button" [igxToggleAction]="dropdown1" class="button_2">
+            <span>More options</span>
+            <igx-icon>
+              keyboard_arrow_down
+            </igx-icon>
+          </button>
+          <div class="row-layout form-fields">
+            <button igxButton="outlined" type="button" (click)="customContentDialog.toggle()" class="button_2">
+              Cancel
+            </button>
+            <button igxButton="contained" type="button" (click)="customContentDialog.toggle()" class="button_2">
+              Custom save
+            </button>
+          </div>
+          <igx-drop-down #dropdown1 class="dropdown_1">
+            <igx-drop-down-item>
+              Option
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Option
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Option
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Option
+            </igx-drop-down-item>
+          </igx-drop-down>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</igx-dialog>
+<igx-snackbar actionText="OK. Got it!" [autoHide]="false" (clicked)="snackbar.toggle()" #snackbar class="snackbar">
+  No rush. I'll stay open till you close.
+</igx-snackbar>
+<igx-banner #bannerOutside class="banner-inline">
+  <p>
+    This is important! Can you make some room?
+  </p>
+  <igx-banner-actions>
+    <button igxButton="flat" type="button" (click)="bannerOutside.toggle()" class="button">
+      More details
+    </button>
+    <button igxButton="flat" type="button" (click)="bannerOutside.toggle()" class="button">
+      Dismiss
+    </button>
+  </igx-banner-actions>
+  <igx-icon class="icon_2">
+    error
+  </igx-icon>
+</igx-banner>
+<igx-snackbar class="snackbar-webinar">
+  Webinar demo
+</igx-snackbar>

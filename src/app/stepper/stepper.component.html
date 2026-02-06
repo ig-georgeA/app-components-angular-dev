@@ -1,0 +1,243 @@
+<div class="column-layout group">
+  <igx-stepper titlePosition="top" [linear]="true" #stepperHoriz class="stepper-horiz">
+    <igx-step [optional]="true">
+      <div igxStepContent class="column-layout step-content">
+        <div class="column-layout group_1">
+          <div class="row-layout group_1">
+            <igx-input-group type="border" class="input">
+              <igx-prefix>
+                <igx-icon class="icon">
+                  person
+                </igx-icon>
+              </igx-prefix>
+              <input type="text" [(ngModel)]="value" igxInput />
+              <label igxLabel>Label</label>
+            </igx-input-group>
+            <igx-input-group type="border" class="input">
+              <igx-prefix>
+                <igx-icon class="icon">
+                  lock
+                </igx-icon>
+              </igx-prefix>
+              <input type="password" [(ngModel)]="value1" igxInput />
+              <label igxLabel>Password</label>
+            </igx-input-group>
+            <igx-input-group type="border" class="input">
+              <input type="text" [(ngModel)]="value2" igxInput />
+              <label igxLabel>Label</label>
+            </igx-input-group>
+          </div>
+          <button igxButton="contained" type="button" class="button">
+            Some action
+          </button>
+        </div>
+        <igx-grid [data]="northwindEmployees" primaryKey="employeeID" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+          <igx-column field="lastName" dataType="string" header="lastName" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="employeeID" dataType="number" header="employeeID" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="firstName" dataType="string" header="firstName" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="title" dataType="string" header="title" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="titleOfCourtesy" dataType="string" header="titleOfCourtesy" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="birthDate" dataType="date" header="birthDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="hireDate" dataType="date" header="hireDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.street" dataType="string" header="address street" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.city" dataType="string" header="address city" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.region" dataType="string" header="address region" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.postalCode" dataType="string" header="address postalCode" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.country" dataType="string" header="address country" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.phone" dataType="string" header="address phone" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="managerID" dataType="number" header="managerID" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="notes" dataType="string" header="notes" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="avatarUrl" dataType="string" header="avatarUrl" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        </igx-grid>
+      </div>
+      <p igxStepTitle>Address</p>
+      <p igxStepSubTitle>(Required)</p>
+    </igx-step>
+    <igx-step [optional]="true">
+      <div igxStepContent class="row-layout step-content_1">
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta nulla asperiores, officia ullam recusandae voluptatem omnis perferendis vitae non magni magnam praesentium placeat nemo quas repudiandae. Nisi, quo ex!
+        </p>
+      </div>
+      <p igxStepTitle>Item</p>
+      <p igxStepSubTitle>(optional)</p>
+    </igx-step>
+    <igx-step [optional]="true">
+      <div igxStepContent class="row-layout step-content_1">
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta nulla asperiores, officia ullam recusandae voluptatem omnis perferendis vitae non magni magnam praesentium placeat nemo quas repudiandae. Nisi, quo ex!
+        </p>
+      </div>
+      <p igxStepTitle>Wrap</p>
+      <p igxStepSubTitle>(Optional)</p>
+    </igx-step>
+  </igx-stepper>
+  <div class="row-layout group_2">
+    <button igxButton="outlined" type="button" (click)="stepperHoriz.prev()" class="button_1">
+      <igx-icon>
+        arrow_back
+      </igx-icon>
+      <span>Prev</span>
+    </button>
+    <button igxButton="outlined" type="button" (click)="stepperHoriz.next()" class="button_1">
+      <span>Next</span>
+      <igx-icon>
+        arrow_forward
+      </igx-icon>
+    </button>
+  </div>
+</div>
+<igx-stepper orientation="vertical" titlePosition="end" #stepperVert class="stepper-vert">
+  <igx-step [isValid]="false">
+    <igx-icon igxStepIndicator>
+      location_on
+    </igx-icon>
+    <div igxStepContent class="column-layout step-content">
+      <div class="column-layout group_1">
+        <div class="row-layout group_1">
+          <igx-input-group type="border" class="input">
+            <igx-prefix>
+              <igx-icon class="icon">
+                person
+              </igx-icon>
+            </igx-prefix>
+            <input type="text" [(ngModel)]="value3" igxInput />
+            <label igxLabel>Label</label>
+          </igx-input-group>
+          <igx-input-group type="border" class="input">
+            <igx-prefix>
+              <igx-icon class="icon">
+                lock
+              </igx-icon>
+            </igx-prefix>
+            <input type="password" [(ngModel)]="value4" igxInput />
+            <label igxLabel>Password</label>
+          </igx-input-group>
+          <igx-input-group type="border" class="input">
+            <input type="text" [(ngModel)]="value5" igxInput />
+            <label igxLabel>Label</label>
+          </igx-input-group>
+        </div>
+      </div>
+      <igx-grid [data]="northwindEmployees" primaryKey="employeeID" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid_1">
+        <igx-column field="employeeID" dataType="number" header="employeeID" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="lastName" dataType="string" header="lastName" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="firstName" dataType="string" header="firstName" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="title" dataType="string" header="title" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="titleOfCourtesy" dataType="string" header="titleOfCourtesy" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="birthDate" dataType="date" header="birthDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="hireDate" dataType="date" header="hireDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.street" dataType="string" header="address street" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.city" dataType="string" header="address city" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.region" dataType="string" header="address region" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.postalCode" dataType="string" header="address postalCode" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.country" dataType="string" header="address country" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="address.phone" dataType="string" header="address phone" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="managerID" dataType="number" header="managerID" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="notes" dataType="string" header="notes" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+        <igx-column field="avatarUrl" dataType="string" header="avatarUrl" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+      </igx-grid>
+      <div class="row-layout group_3">
+        <button igxButton="outlined" type="button" (click)="stepperVert.next()" class="button_2">
+          NEXT
+        </button>
+      </div>
+    </div>
+    <p igxStepTitle>Address</p>
+    <p igxStepSubTitle>complete in order</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <igx-icon igxStepIndicator>
+      payment
+    </igx-icon>
+    <div igxStepContent class="column-layout step-content_2">
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta nulla asperiores, officia ullam recusandae voluptatem omnis perferendis vitae non magni magnam praesentium placeat nemo quas repudiandae. Nisi, quo ex!
+      </p>
+      <div class="row-layout group_3">
+        <button igxButton="outlined" type="button" (click)="stepperVert.prev()" class="button_2">
+          PREV
+        </button>
+        <button igxButton="outlined" type="button" (click)="stepperVert.next()" class="button_2">
+          NEXT
+        </button>
+      </div>
+    </div>
+    <p igxStepTitle>Payment</p>
+  </igx-step>
+  <igx-step [optional]="true">
+    <igx-icon igxStepIndicator>
+      checklist
+    </igx-icon>
+    <div igxStepContent class="column-layout step-content_2">
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta nulla asperiores, officia ullam recusandae voluptatem omnis perferendis vitae non magni magnam praesentium placeat nemo quas repudiandae. Nisi, quo ex!
+      </p>
+      <div class="row-layout group_3">
+        <button igxButton="outlined" type="button" (click)="stepperVert.prev()" class="button_2">
+          PREV
+        </button>
+      </div>
+    </div>
+    <p igxStepTitle>Review order</p>
+    <p igxStepSubTitle>(Optional)</p>
+  </igx-step>
+</igx-stepper>
+<div class="column-layout group_4">
+  <igx-stepper orientation="vertical" titlePosition="end" #stepper class="stepper-vert">
+    <igx-step [optional]="true">
+      <igx-icon family="imx-icon" igxStepIndicator name="imx-delivery"></igx-icon>
+      <div igxStepContent class="column-layout step-content_3">
+        <p class="ig-typography__body-2 text">
+          Content
+        </p>
+      </div>
+      <p igxStepTitle>Parcel dispatched</p>
+      <p igxStepSubTitle>13 Aug 2021–01:10 PM</p>
+    </igx-step>
+    <igx-step [optional]="true">
+      <igx-icon family="imx-icon" igxStepIndicator name="imx-bottom-records"></igx-icon>
+      <div igxStepContent class="column-layout step-content_3">
+        <div class="row-layout group_5">
+          <button igxButton="contained" type="button" (click)="stepper.prev()" class="button_1">
+            Prev
+          </button>
+          <button igxButton="contained" type="button" (click)="stepper.next()" class="button_1">
+            Next
+          </button>
+        </div>
+      </div>
+      <p igxStepTitle>Arrived at sorting center</p>
+      <p igxStepSubTitle>15 Aug 2021– 02:51 AM</p>
+    </igx-step>
+    <igx-step [optional]="true">
+      <igx-icon igxStepIndicator>
+        shopping_basket
+      </igx-icon>
+      <div igxStepContent class="column-layout step-content_3"></div>
+      <p igxStepTitle>Dispatched from sorting center</p>
+      <p igxStepSubTitle>15 Aug 2021 – 08:43 AM</p>
+    </igx-step>
+    <igx-step [optional]="true">
+      <igx-icon igxStepIndicator>
+        flag
+      </igx-icon>
+      <div igxStepContent class="column-layout step-content_3"></div>
+      <p igxStepTitle>Arrived at Destination city</p>
+      <p igxStepSubTitle>20 Aug 2021 – 07:13 AM</p>
+    </igx-step>
+    <igx-step [optional]="true">
+      <igx-icon igxStepIndicator>
+        shopping_basket
+      </igx-icon>
+      <div igxStepContent class="column-layout step-content_3">
+        <p class="ig-typography__body-2 text">
+          Your parcel is on its way. It will be delivered by DHL in the next 24 hours. Delivery address is:
+          825 Garfield Road, Peoria, 61602 IL
+        </p>
+      </div>
+      <p igxStepTitle>Delivery</p>
+      <p igxStepSubTitle>Estimated 21 Aug 2021 – 07;55 PM</p>
+    </igx-step>
+  </igx-stepper>
+</div>
