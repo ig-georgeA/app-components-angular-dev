@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IGridEditDoneEventArgs, IGX_ACTION_STRIP_DIRECTIVES, IGX_GRID_DIRECTIVES, IgxPaginatorComponent, IRowDataEventArgs } from 'igniteui-angular';
 import { firstValueFrom, Subject, take, takeUntil } from 'rxjs';
 import { CustomerDto } from '../models/northwind-apiig/customer-dto';
@@ -13,15 +13,6 @@ import { NorthwindAPIIGService } from '../services/northwind-apiig.service';
 })
 export class GridComponent implements OnInit, OnDestroy {
   private destroy$: Subject<void> = new Subject<void>();
-
-  private _test = 'abc';
-  @Input()
-  public get test(): string {
-    return this._test ?? 'abc';
-  }
-  public set test(value: string) {
-    this._test = value;
-  }
 
   private _basic_grid_1_Page_Size = 15;
   public get basic_grid_1_Page_Size(): number {

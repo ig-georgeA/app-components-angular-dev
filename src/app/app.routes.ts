@@ -29,9 +29,9 @@ import { CSSGridLayoutComponent } from './css-grid-layout/css-grid-layout.compon
 import { ChildViewComponent } from './child-view/child-view.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'grid-with-templates', pathMatch: 'full' },
+  { path: '', redirectTo: 'grid', pathMatch: 'full' },
   { path: 'error', component: UncaughtErrorComponent },
-  { path: 'grid/:test', component: GridComponent, data: { text: 'Grid' } },
+  { path: 'grid', component: GridComponent, data: { text: 'Grid' } },
   { path: 'grid-with-templates', component: GridWithTemplatesComponent, data: { text: 'Grid-With-Templates' } },
   { path: 'tree-grid', component: TreeGridComponent, data: { text: 'Tree-Grid' } },
   { path: 'hierarchical-grid', component: HierarchicalGridComponent, data: { text: 'Hierarchical-Grid' } },
