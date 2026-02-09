@@ -10,8 +10,8 @@
 
 $custom-palette: palette(
   $primary: #6C35CE,
-  $secondary: #6C35CE,
-  $surface: #fff,
+  $secondary: #02a1a7,
+  $surface: #fde1e1,
   $warn: #faa419);
 @include theme($palette: $custom-palette, $schema: $light-material-schema);
 
